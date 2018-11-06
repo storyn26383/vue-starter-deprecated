@@ -20,6 +20,11 @@ module.exports = {
   */
   loading: { color: '#3b8070' },
   /*
+  /*
+  ** SPA mode
+  */
+  mode: 'spa',
+  /*
   ** Build configuration
   */
   build: {
