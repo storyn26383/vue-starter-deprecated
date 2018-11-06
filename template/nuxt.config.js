@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
@@ -54,10 +55,24 @@ module.exports = {
   */
   build: {
     /*
+    ** Babel configuration
+    */
+    babel: {
+      plugins: [
+        '@unisharp/babel-plugin'
+      ]
+    },
+    /*
     ** Plugins
     */
     vendor: [
+      '@unisharp/helpers.js',
       'axios'
+    ],
+    plugins: [
+      new webpack.ProvidePlugin({
+        UniSharp: '@unisharp/helpers.js'
+      })
     ],
     extend (config, { isDev, isClient }) {
       /*
