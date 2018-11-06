@@ -20,6 +20,31 @@ module.exports = {
   */
   loading: { color: '#3b8070' },
   /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/axios'
+  ],
+  /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  /*
+  ** Axios configuration
+  */
+  axios: {
+    baseURL: process.env.API_BASE || '/api/v1'
+  },
+  /*
+  ** Router configuration
+  */
+  router: {
+    middleware: [
+      //
+    ]
+  },
   /*
   ** SPA mode
   */
@@ -28,6 +53,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    /*
+    ** Plugins
+    */
+    vendor: [
+      'axios'
+    ],
     extend (config, { isDev, isClient }) {
       /*
       ** Run ESLint on save
