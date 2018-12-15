@@ -95,7 +95,7 @@ module.exports = {
         })
 
         config.plugins.push(new StyleLintPlugin({
-          files: ['**/*.{vue,htm,html,css,sss,less,scss,sass}']
+          files: ['**/*.{vue,sss,less,scss,sass}']
         }))
       }
     }
