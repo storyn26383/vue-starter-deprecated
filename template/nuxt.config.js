@@ -17,6 +17,14 @@ module.exports = {
     ]
   },
   /*
+  ** Global CSS
+  */
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/scss/bootstrap/bootstrap.scss',
+    '~/assets/scss/main.scss'
+  ],
+  /*
   ** Customize the progress bar color
   */
   loading: { color: '#3b8070' },
@@ -24,7 +32,8 @@ module.exports = {
   ** Plugins
   */
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/font-awesome'
   ],
   /*
   ** Modules
